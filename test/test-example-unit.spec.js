@@ -1,5 +1,5 @@
 const {expect} = require("chai");
-const {exampleFunction} = require("../src/functions");
+const {exampleFunction, sum} = require("../src/functions");
 describe("테스트 작성 예", () => {
     before(() =>{})
     after(() =>{})
@@ -10,6 +10,13 @@ describe("테스트 작성 예", () => {
         });
     })
     describe("sum function spec", () => {
+        it('1+1 = 2', () => {
+            const aParam = 1;
+            const bParam = 1;
+            const expectResult = 2;
+            const result = sum(aParam, bParam);
+            expect(result).to.be.equals(expectResult);
+        })
     })
     describe("subtract function spec", () => {
 
